@@ -219,7 +219,7 @@ def login_page():
 
     if st.button('Login'):
         # Replace with your authentication logic
-        if username == '1' and password == '1':
+        if username == 'dbms' and password == '1':
             st.session_state.is_logged_in = True
             st.success('Login successful!')
             st.experimental_rerun()

@@ -6,6 +6,7 @@ from pymongo import MongoClient
 def connect_to_mongodb():
     with st.spinner('Connecting to MongoDB...'):
         try:
+            # MongoDB connection string (replace with your actual connection details)
             client = MongoClient('mongodb+srv://med:1234@cluster0.xa1kvtz.mongodb.net/')
             db = client['medical_data']
 
@@ -91,16 +92,16 @@ def replace_diagnosis_mapping(diagnosis_medicine_collection):
 
     # Insert new data
     diagnosis_medicine_collection.insert_many([
-        { "problem": "Cold", "medicine": "Antihistamines" },
-        { "problem": "Cough", "medicine": "Dextromethorphan-based cough syrup" },
-        { "problem": "Flu", "medicine": "Antiviral medications" },
-        { "problem": "Headache", "medicine": "Ibuprofen" },
-        { "problem": "Allergies", "medicine": "Antihistamines" },
-        { "problem": "Heartburn", "medicine": "Antacids" },
-        { "problem": "Minor Burns", "medicine": "Antiseptic Cream" },
-        { "problem": "Muscle Pain", "medicine": "Ibuprofen" },
-        { "problem": "Nausea", "medicine": "Antiemetics" },
-        { "problem": "Insomnia", "medicine": "Over-the-counter Sleep Aids" },
+        {"problem": "Cold", "medicine": "Antihistamines"},
+        {"problem": "Cough", "medicine": "Dextromethorphan-based cough syrup"},
+        {"problem": "Flu", "medicine": "Antiviral medications"},
+        {"problem": "Headache", "medicine": "Ibuprofen"},
+        {"problem": "Allergies", "medicine": "Antihistamines"},
+        {"problem": "Heartburn", "medicine": "Antacids"},
+        {"problem": "Minor Burns", "medicine": "Antiseptic Cream"},
+        {"problem": "Muscle Pain", "medicine": "Ibuprofen"},
+        {"problem": "Nausea", "medicine": "Antiemetics"},
+        {"problem": "Insomnia", "medicine": "Over-the-counter Sleep Aids"},
     ])
 
 # Function to recommend medicine based on the patient's problem

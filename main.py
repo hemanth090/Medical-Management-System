@@ -203,7 +203,7 @@ def main_page(client, medicines_collection, purchases_collection, patients_colle
         # Logout button
         if st.button('Logout'):
             st.session_state.is_logged_in = False
-            st.experimental_rerun()
+            st.rerun()
 
         # Close MongoDB connection
         client.close()
@@ -222,7 +222,7 @@ def login_page():
         if username == 'dbms' and password == '1':
             st.session_state.is_logged_in = True
             st.success('Login successful!')
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.warning('Login failed. Please check your credentials.')
 
